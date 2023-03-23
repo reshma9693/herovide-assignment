@@ -1,0 +1,45 @@
+Instance : An EC2 instance is a virtual server in Amazon's Elastic Compute Cloud for running applications on the Amazon web services(AWS) infrastructure.
+
+Reactjs appalication: React is a declarative,efficientand flexible java script libraryfor building user interfaces.
+
+* Cloud monitoring is a method of reviewing, observing, and managing the operational workflow in a cloud-based IT infrastructure.
+
+steps for creating an ec2 instance:
+
+* Signin to aws management console then select ec2 instance and click on launch instance
+* After that enter name of instance and select application and os image(amazon machine image) of amazon linux
+*select instance type and give keypair details
+* then click on network settings and edit the settings then click on launch instance
+*instance is getting launched after launching the instance connect the instance
+and give the following commands
+
+Deploying reactjs application on ec2 instance through the following commands:
+
+> sudo yum update
+> sudo yum install node. js
+> yum install --lts
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+> . ~/.nvm/nvm.sh
+> nvm install --lts
+> nvm install 16
+> node --version
+> npx create-react-app myapp
+> sudo yum install git
+> git clone https://github.com/snehal-herovired/Devops_Batch_Aditya
+> ls
+> cd Devops_Batch_Aditya
+> ls
+> cd amazonreact
+> ls
+> npm run build
+> npm start
+
+* after all these commands we get succesful compilation message
+*then go to instance and select security group id and edit the inbound rules 
+select type:custom tcp
+port range:3000 then save rules
+*in new tab enter public ip followed by port number
+35.85.38.125:3000
+*finally we get reactapp
+* in instance we select detail monitoring and monitor with the help of cloud watch 
+* we are able to watch in the form of graphs. 
